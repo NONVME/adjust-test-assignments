@@ -40,7 +40,7 @@ make run-dev
 2. Upload DB.
 
 ```bash
-curl -X POST -d "https://gist.githubusercontent.com/kotik/3baa5f53997cce85cc0336cb1256ba8b/raw/3c2a590b9fb3e9c415a99e56df3ddad5812b292f/dataset.csv" --header 'Content-Type: application/json' http://127.0.0.1:8000/upload
+curl -X POST -d '"https://gist.githubusercontent.com/kotik/3baa5f53997cce85cc0336cb1256ba8b/raw/3c2a590b9fb3e9c415a99e56df3ddad5812b292f/dataset.csv"' --header 'Content-Type: application/json' http://127.0.0.1:8000/upload
 ```
 
    
