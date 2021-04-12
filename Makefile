@@ -5,7 +5,7 @@ MAKEFLAGS += --silent
 
 ## run: Run production server
 run:
-	gunicorn task_manager.wsgi --log-file -
+	gunicorn config.wsgi --log-file -
 
 ## run-dev: Run developer server
 run-dev:
