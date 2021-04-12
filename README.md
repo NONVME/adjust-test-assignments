@@ -33,6 +33,7 @@ make install
 
 ```bash
 echo -e 'SECRET_KEY="rdh@tnbi+oz*5*92nze\#)ww_&l@y1+4^z0leoi&s44sh6_ygca"\nDEBUG=True' > .env
+make migrate
 make run-dev
 ```
 
