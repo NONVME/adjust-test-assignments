@@ -11,3 +11,6 @@ class Dataset(models.Model):
     installs = models.IntegerField()
     spend = models.DecimalField(max_digits=9, decimal_places=2)
     revenue = models.DecimalField(max_digits=9, decimal_places=2)
+
+    def __str__(self) -> str:
+        return str(self.pk)

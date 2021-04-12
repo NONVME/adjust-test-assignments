@@ -4,7 +4,7 @@ from dataset_api.models import Dataset
 from dataset_api.serializers import DataSerializer
 
 
-data_adv_compaign = {
+DATASET_ONE_COMPAIGN = {
     'date': '2017-05-17',
     'channel': 'adcolony',
     'country': 'US',
@@ -19,10 +19,9 @@ data_adv_compaign = {
 
 class DataSerializerTestCase(TestCase):
     def test_data_serialize(self):
-        adv_campaign = Dataset.objects.create(**data_adv_compaign)
+        adv_campaign = Dataset.objects.create(**DATASET_ONE_COMPAIGN)
         serializer_data = DataSerializer(adv_campaign).data
         expected_data = {
-            'id': adv_campaign.id,
             'date': '2017-05-17',
             'channel': 'adcolony',
             'country': 'US',

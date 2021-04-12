@@ -16,9 +16,8 @@ lint:
 	@poetry check
 	@poetry run flake8
 
-## migrate: makemigrations -> migrate
+## migrate: migrate
 migrate:
-	@poetry run python3 manage.py makemigrations
 	@poetry run python3 manage.py migrate
 
 ## test: Run tests
