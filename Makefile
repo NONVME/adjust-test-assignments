@@ -3,6 +3,10 @@ PROJECTNAME=$(shell basename "$(PWD)")
 #Make пишет работу в консоль Linux. Сделаем его silent.
 MAKEFLAGS += --silent
 
+## Install dependencies
+install:
+	@poetry install
+
 ## run: Run production server
 run:
 	gunicorn config.wsgi --log-file -
@@ -30,15 +34,6 @@ test-coverage-report:
 
 test-coverage-report-xml:
 	@poetry run coverage xml
-
-## build: Check, lint and build package
-build: install test
-	rm -rf ./dist/*
-	@poetry build
-
-## package-install: Install package localy
-package-install: build
-	@pip install --user --upgrade dist/*.whl
 
 heroku_release:
 	python manage.py migrate
