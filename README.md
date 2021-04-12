@@ -1,3 +1,5 @@
+[![CI](https://github.com/NONVME/adjust-test-assignments/actions/workflows/CI.yml/badge.svg)](https://github.com/NONVME/adjust-test-assignments/actions/workflows/CI.yml)
+
 # AdjustHomeTask
 
 Sample dataset: https://gist.github.com/kotik/3baa5f53997cce85cc0336cb1256ba8b/
@@ -25,14 +27,26 @@ make install
 
 ## Usage
 
-- For local use, we need to create a .env  file in root project, with the *secret_key* and *debug* variables. After which we can start the server locally.
+##### Localy
 
-  ```bash
-  echo -e 'SECRET_KEY="rdh@tnbi+oz*5*92nze\#)ww_&l@y1+4^z0leoi&s44sh6_ygca"\nDEBUG=True' > .env
-  make run-dev
-  ```
+1. For local use, we need to create a .env  file in root project, with the *secret_key* and *debug* variables. After which we can start the server locally.
 
-- or **[Preview on Heroku](https://adjust-dataset-api.herokuapp.com/api/)**
+```bash
+echo -e 'SECRET_KEY="rdh@tnbi+oz*5*92nze\#)ww_&l@y1+4^z0leoi&s44sh6_ygca"\nDEBUG=True' > .env
+make run-dev
+```
+
+2. Upload DB.
+
+```bash
+curl -X POST -d "https://gist.githubusercontent.com/kotik/3baa5f53997cce85cc0336cb1256ba8b/raw/3c2a590b9fb3e9c415a99e56df3ddad5812b292f/dataset.csv" --header 'Content-Type: application/json' http://127.0.0.1:8000/upload
+```
+
+   
+
+##### Heroku
+
+**[Preview on Heroku](https://adjust-dataset-api.herokuapp.com/api/)**
 
 1. ##### Common API use-cases:
 
