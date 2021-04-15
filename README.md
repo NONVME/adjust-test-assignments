@@ -1,7 +1,8 @@
+
 [![CI](https://github.com/NONVME/adjust-test-assignments/actions/workflows/CI.yml/badge.svg)](https://github.com/NONVME/adjust-test-assignments/actions/workflows/CI.yml)
 
 # AdjustHomeTask
-
+Task : https://gist.github.com/kotik-adjust/4883e33c439db6de582fd0986939045c
 Sample dataset: https://gist.github.com/kotik/3baa5f53997cce85cc0336cb1256ba8b/
 
 Expose the sample dataset through a single generic HTTP API endpoint, which is capable of filtering, grouping and sorting.
